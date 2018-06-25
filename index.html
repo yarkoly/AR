@@ -36,7 +36,7 @@
 	
 	<a-assets>
 	
-		<a-asset-item id="london-obj" src="https://raw.githubusercontent.com/yarkoly/AR_test/master/shape.obj" material="color: white; opacity: 0.7;"></a-asset-item>
+		<a-asset-item id="london-obj" src="https://raw.githubusercontent.com/yarkoly/AR_test/master/shape.obj"></a-asset-item>
 
 		<!--<a-asset-item id="london-mtl" src="https://raw.githubusercontent.com/yarkoly/AR_test/master/shape.mtl"></a-asset-item>-->
 
@@ -48,9 +48,11 @@
 
 	<a-marker preset="hiro" id="aframe-scene">
 		
-		<a-entity light="type: hemisphere; color: #fefddd; groundColor: #fefddd; intensity: 1.2"></a-entity>
+		<a-entity light="color: #red; intensity: 20" position="5 0 5"></a-entity>
+      
+      <a-entity light="color: #red; intensity: 20" position="-5 0 -5"></a-entity>
 		
-		<a-entity id="london" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.5 0.5" obj-model="obj: #london-obj; mtl: #london-mtl">
+		<a-entity id="london" material="color: red;" rotation="0 -90 0" side="double" position="0 1 0" scale="0.5 0.5 0.5" obj-model="obj: #london-obj;">
 			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
 			</a-animation>
 		</a-entity>
