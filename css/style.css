@@ -8,8 +8,8 @@ body {
 
 .btns-wrap {
   font-family: 'Montserrat', sans-serif;
-  bottom: 20px;
-  left: 20px;
+  bottom: 8px;
+  left: 8px;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -17,6 +17,7 @@ body {
 }
 
 .btn {
+  
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -30,13 +31,15 @@ body {
   background: #f45;
   display: inline-block;
   text-align: center;
-  padding: 19px 30px;
+  padding: 19px 24px;
   transition: all 0.2s;
 }
+
 .rotate {
+  
   background-color: #6B00FF;
   background-image: url("https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2F3d.svg?1530949776885");
-  background-size: 60%;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -56,7 +59,7 @@ body {
 .scale {
   background-color: #6B00FF;
   background-image: url("https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fzoom.svg?1530949777092");
-  background-size: 60%;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: scale(1);
@@ -65,12 +68,12 @@ body {
 .scale_one {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-size: 60%;
+  background-size: 50%;
 }
 .scale_two {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background-size: 60%;
+  background-size: 50%;
 }
 .switch {
   background-color: #000000;
@@ -82,18 +85,26 @@ body {
 
 .start {
   background-color: #6B00FF;
-  width: 160px;
+  width: 150px;
   color: #FFFFFF;
   font-weight: 500;
   font-size: 20px;
   text-decoration: none;
 }
 
+.AR-black {
+  z-index: 9998;
+  background: #000000;
+  
+  width: 100%;
+  height: 100%;
+}
+
 .AR-tip {
   z-index: 9999;
-  padding: 20px 40px 30px;
+  padding: 10px 20px 20px;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 300px;
   display: block;
   background: #FFFFFF;
   position: absolute;
