@@ -4,6 +4,21 @@ body {
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
 }
+
+
+.logo {
+  top: -8px;
+  left: 16px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  z-index: 9997;
+}
+
+.logo img {
+  width:100px;
+}
+
 .btns-wrap {
   font-family: 'Montserrat', sans-serif;
   bottom: 8px;
@@ -102,6 +117,7 @@ body {
 
 .AR-tip {
   z-index: 9999;
+  border-radius: 10px;
   padding: 10px 0px 20px;
   min-width: 288px;
   max-width: 340px;
