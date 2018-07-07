@@ -25,7 +25,7 @@
 <div class="AR-tip">
 		
 		<h2>Museum of Modern Sculpture</h2>
-		<p>Explore sculptures of the our museum. You can switch them by clicking on black button</p>
+		<p>Explore sculptures of our museum by hovering your device on the sticker with a black mark.</p>
 		<a class="btn start" href="#">Continue</a>
 		
 </div>
@@ -34,7 +34,7 @@
 <div class="btns-wrap">
 	<div class="btn rotate"></div>
 	<div class="btn scale"></div>
-	<div class="btn switch">Uderground</div>
+	<div class="btn switch">Next</div>
 </div>
 
 <a-scene embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' vr-mode-ui="enabled: false">
@@ -54,20 +54,22 @@
 
 	<a-marker preset="hiro" id="aframe-scene">
 		
-		<a-entity light="color: #red; intensity: 20" position="5 0 5"></a-entity>
-      
-      <a-entity light="color: #red; intensity: 20" position="-5 0 -5"></a-entity>
+		<a-entity light="color: #red; intensity: 2" position="5 0 5"></a-entity>
+    	<a-entity light="color: #red; intensity: 2" position="-5 0 -5"></a-entity>
 		
-		<a-entity id="london" material="color: red;" rotation="0 -90 0" side="double" position="0 1 0" scale="0.5 0.5 0.5" obj-model="obj: #london-obj;">
+
+		<a-entity id="london" material="color: white;" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.5 0.5" obj-model="obj: #london-obj;">
 			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
 			</a-animation>
 		</a-entity>
 		
-		<a-entity id="kyiv" visible="false" rotation="0 -90 0" side="double" position="0.0 0.2 0" scale="0.4 0.4 0.4" obj-model="obj: #kyiv-obj; mtl: #kyiv-mtl">
+
+		<!--<a-entity id="kyiv" visible="false" rotation="0 -90 0" side="double" position="0.0 0.2 0" scale="0.4 0.4 0.4" obj-model="obj: #kyiv-obj; mtl: #kyiv-mtl">
 			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
 			</a-animation>
-		</a-entity>
+		</a-entity>-->
 		
+
 	</a-marker>
 
 	<a-sky color="#6EBAA7"></a-sky>
@@ -75,12 +77,14 @@
 	<a-entity camera></a-entity>
 	
 </a-scene>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
-  
 
-    <script  src="js/index.js"></script>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+
+<script  src="js/index.js"></script>
 
 
 
