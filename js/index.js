@@ -5,11 +5,11 @@ var londonModel = document.querySelector('#london'),
 		rotateBtn = $(".rotate"),
 		scaleBtn = $(".scale"),
 		switchBtn = $(".switch"),
-		gotitBtn = $(".gotit"); 
+		startBtn = $(".start");
 
 
-gotitBtn.click(function(){
-	gotitBtn.parent().css({
+startBtn.click(function(){
+	startBtn.parent().css({
 		display: "none"
 	});
 });

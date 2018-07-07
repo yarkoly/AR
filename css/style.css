@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,500,900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
 body {
   margin: 0px;
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .btns-wrap {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   bottom: 20px;
   left: 20px;
   position: absolute;
@@ -13,6 +15,7 @@ body {
   flex-direction: row;
   z-index: 9998;
 }
+
 .btn {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -20,30 +23,39 @@ body {
           user-select: none;
   cursor: pointer;
   box-sizing: border-box;
-  margin: 18px;
+  margin: 8px;
   border-radius: 1000px;
   width: 60px;
   height: 60px;
   background: #f45;
   display: inline-block;
   text-align: center;
-  padding: 17px 20px;
+  padding: 19px 30px;
   transition: all 0.2s;
 }
 .rotate {
-  background-color: #0078ff;
-  background-image: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_3d_rotation_white_24px.svg");
+  background-color: #6B00FF;
+  background-image: url("https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2F3d.svg?1530949776885");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .rotate_fade {
-  opacity: 0.4;
-  background-color: #323965;
+  opacity: 1;
+  background-color: #6B00FF;
+  animation: rotate 2s linear infinite;
 }
+
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .scale {
-  background-color: #f02853;
-  background-image: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_zoom_in_white_24px.svg");
+  background-color: #6B00FF;
+  background-image: url("https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fzoom.svg?1530949777092");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
@@ -51,51 +63,66 @@ body {
           transform: scale(1);
 }
 .scale_one {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  background-size: 70%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-size: 60%;
 }
 .scale_two {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  background-size: 80%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: 60%;
 }
 .switch {
-  background-color: #ffc21e;
+  background-color: #000000;
   width: auto;
-  font-weight: 900;
+  color: #FFFFFF;
+  font-weight: 400;
   font-size: 20px;
 }
+
+.start {
+  background-color: #6B00FF;
+  width: 160px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+}
+
 .AR-tip {
   z-index: 9999;
-  padding: 30px 50px 60px;
+  padding: 20px 40px 30px;
   min-width: 300px;
   max-width: 400px;
   display: block;
-  background: rgba(0,0,0,0.7);
+  background: #FFFFFF;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+
 }
+
 .AR-tip h2 {
-  color: #fff;
-  font-weight: 500;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
 }
+
 .AR-tip p {
-  font-weight: 300;
-  color: #fff;
-  font-size: 1.2em;
-  line-height: 1.3em;
+  text-align: center;
+  font-weight: 400;
+  color: #000;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding-bottom: 10px;
 }
-.gotit {
-  font-style: italic;
-  font-size: 1.4em;
-  color: #ff0;
-  text-decoration: none;
-  border-bottom: 2px solid #ff0;
+
+.AR-tip a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.links {
-  color: #f45;
-}
+
+
