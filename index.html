@@ -1,19 +1,99 @@
 <!DOCTYPE html>
 <html lang="en" >
 
+ 
 <head>
   <meta charset="UTF-8">
-  <title>360</title>
+  <title>MoMS</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
 
 <body>
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-<a-scene vr-mode-ui="enabled: false">
-  <a-assets>
-    <img id="panorama" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2F360.jpg?1530994977334" crossorigin />
-  </a-assets>
-  <a-sky src="#panorama" rotation="0 -90 0" segments-height="100" segments-width="256"></a-sky>
-</a-scene>
+
+	<meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
+	
+	<meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+
+<div class="logo">
+	<img src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Flogo.svg?1530970037830">
+</div>
+
+<div class="AR-tip">
+		
+		<h2>Museum of Modern Sculpture</h2>
+		<p>Explore sculptures of our museum by hovering your device on the sticker with a black mark.</p>
+		<a class="btn start" href="#">Continue</a>
+		
+</div>
+
+
+<div class="btns-wrap">
+	<div class="btn rotate"></div>
+	<div class="btn scale"></div>
+	<div class="btn switch">Next</div>
+</div>
+
+<a-scene embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' vr-mode-ui="enabled: false">
   
+	
+	<a-assets>
+	
+		<a-asset-item id="one-obj" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape.obj?1530962595586"></a-asset-item>
+
+		<!--<a-asset-item id="one-mtl" src=""></a-asset-item>-->
+
+		<a-asset-item id="two-obj" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape_2.obj?1530962593475"></a-asset-item>
+
+		<!--<a-asset-item id="two-mtl" src=""></a-asset-item>-->
+
+	</a-assets>
+
+
+	<a-marker preset='custom' type='pattern' url='https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fpattern-marker.patt?1530968790015'>
+
+		
+		<a-entity light="color: #white; intensity: 0.9" position="10 10 10"></a-entity>
+    
+    	<a-entity light="color: #white; intensity: 0.8" position="-10 -10 -10"></a-entity>
+    
+    
+
+		<a-entity id="one" material="color: white;" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.4 0.5" obj-model="obj: #one-obj;">
+			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
+			</a-animation>
+		</a-entity>
+		
+
+		<a-entity id="two" material="color: white;" visible="false" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.4 0.5" obj-model="obj: #two-obj;">
+			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
+			</a-animation>
+		</a-entity>
+		
+
+	</a-marker>
+
+	<a-sky color="#6EBAA7"></a-sky>
+	
+	<a-entity camera></a-entity>
+	
+</a-scene>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
+
 </html>
