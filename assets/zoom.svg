@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>zoom</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="S" transform="translate(-134.000000, -54.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M157.497802,74.6693744 L165.414214,82.5857864 L162.585786,85.4142136 L154.669374,77.4978015 C152.519467,79.0711327 149.868208,80 147,80 C139.820298,80 134,74.1797017 134,67 C134,59.8202983 139.820298,54 147,54 C154.179702,54 160,59.8202983 160,67 C160,69.8682078 159.071133,72.519467 157.497802,74.6693744 Z M147,76 C151.970563,76 156,71.9705627 156,67 C156,62.0294373 151.970563,58 147,58 C142.029437,58 138,62.0294373 138,67 C138,71.9705627 142.029437,76 147,76 Z" id="zoom"></path>
+        </g>
+    </g>
+</svg>
