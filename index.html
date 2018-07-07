@@ -42,18 +42,18 @@
 	
 	<a-assets>
 	
-		<a-asset-item id="london-obj" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape.obj?1530962595586"></a-asset-item>
+		<a-asset-item id="one-obj" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape.obj?1530962595586"></a-asset-item>
 
-		<!--<a-asset-item id="london-mtl" src="https://raw.githubusercontent.com/yarkoly/AR_test/master/shape.mtl"></a-asset-item>-->
+		<!--<a-asset-item id="one-mtl" src="https://raw.githubusercontent.com/yarkoly/AR_test/master/shape.mtl"></a-asset-item>-->
 
-		<a-asset-item id="kyiv-obj" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape_2.obj?1530962593475"></a-asset-item>
+		<a-asset-item id="two-obj" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape_2.obj?1530962593475"></a-asset-item>
 
-		<!--<a-asset-item id="kyiv-mtl" src="https://raw.githubusercontent.com/PavelLaptev/test-rep/master/AR-Framer-meetup/3d-models/kyiv/kyiv-framer-model.mtl"></a-asset-item>-->
+		<!--<a-asset-item id="two-mtl" src="https://raw.githubusercontent.com/PavelLaptev/test-rep/master/AR-Framer-meetup/3d-models/kyiv/kyiv-framer-model.mtl"></a-asset-item>-->
 
 	</a-assets>
 
 
-	<a-marker type="pattern" url="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fpattern-marker.patt?1530964249172">
+	<a-marker-camera type='pattern' preset='custom' patternUrl='https://github.com/yarkoly/AR/blob/master/my_marker.patt'>
 
 		
 		<a-entity light="color: #white; intensity: 0.9" position="10 10 10"></a-entity>
@@ -62,19 +62,19 @@
     
     
 
-		<a-entity id="london" material="color: white;" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.4 0.5" obj-model="obj: #london-obj;">
+		<a-entity id="one" material="color: white;" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.4 0.5" obj-model="obj: #one-obj;">
 			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
 			</a-animation>
 		</a-entity>
 		
 
-		<a-entity id="kyiv" material="color: white;" visible="false" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.4 0.5" obj-model="obj: #kyiv-obj;">
+		<a-entity id="two" material="color: white;" visible="false" rotation="0 -90 0" side="double" position="0 0 0" scale="0.5 0.4 0.5" obj-model="obj: #two-obj;">
 			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
 			</a-animation>
 		</a-entity>
 		
 
-	</a-marker>
+	</a-marker-camera>
 
 	<a-sky color="#6EBAA7"></a-sky>
 	
