@@ -8,8 +8,10 @@ var oneModel = document.querySelector('#one'),
 		startBtn = $(".start");
 
 
-startBtn.click(function(){
-	startBtn.parent().css({
+startBtn.click(function()
+{
+	startBtn.parent().css(
+	{
 		display: "none"
 	});
 });
